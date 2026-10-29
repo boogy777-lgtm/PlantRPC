@@ -1,0 +1,4 @@
+﻿>>> remoting.connect host=127.0.0.1 port=49152
+{"ok":true,"result":{"mode":"online","online":true,"onlineHost":"127.0.0.1","onlinePort":"49152"},"cmd":"remoting.connect"}
+>>> remoting.script file=C:\Users\HALLIBURTON\Desktop\EPLAN_RESEARCH\artifacts\wY_rpc\scripts\export_do_page.cs timeout=120
+{"ok":true,"result":{"connectionsGenerated":true,"image":"C:\\Users\\HALLIBURTON\\Desktop\\EPLAN_RESEARCH\\artifacts\\wY_rpc\\do_fb.png","exists":false,"success":true},"cmd":"remoting.script"}

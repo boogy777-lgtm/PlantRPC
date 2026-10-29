@@ -1,0 +1,15 @@
+{
+  "page": { "library": "IEC_symbol", "plant": "T", "location": "DCL", "counter": 1, "replace": true },
+  "placements": [
+    { "id": "X1", "symbol": "X", "tag": "-X1", "x": 50, "y": 100, "pins": ["1", "2"] },
+    { "id": "X2", "symbol": "X", "tag": "-X2", "x": 50, "y": 60,  "pins": ["1", "2"] }
+  ],
+  "wires": [
+    { "from": { "placement": "X1", "pin": "2" }, "to": { "placement": "X2", "pin": "1" } }
+  ],
+  "texts": [
+    { "text": "DCL test", "x": 40, "y": 120, "height": 3.5 }
+  ],
+  "export": { "path": "C:\\Users\\HALLIBURTON\\Desktop\\EPLAN_RESEARCH\\artifacts\\wY_rpc\\diag\\out", "width": 1200 },
+  "generateConnections": true
+}

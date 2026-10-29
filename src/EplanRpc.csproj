@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net481</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <AssemblyName>EplanRpc</AssemblyName>
+    <RootNamespace>EplanRpc</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EplanBin>C:\Program Files\EPLAN\Platform\2026.0.3\Bin</EplanBin>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net481" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Diagnostic script payloads are inputs to the RPC client, not part of
+         the server assembly. -->
+    <Compile Remove="scripts\**\*.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The public API surface is part of the server identity. The external
+         dump remains an override for development, but the shipped exe is
+         self-contained. -->
+    <EmbeddedResource Include="..\api\EPLAN_API_SURFACE.json">
+      <LogicalName>EPLAN_API_SURFACE.json</LogicalName>
+    </EmbeddedResource>
+    <!-- Symbol pin geometry is part of the offline drawing identity: the
+         shipped exe resolves wire endpoints without an external data file. -->
+    <EmbeddedResource Include="symbol_pins.json">
+      <LogicalName>symbol_pins.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web.Extensions" />
+    <!-- Offline surface: compile-time references to the managed object model.
+         These do NOT drag System.Memory/System.Buffers into the output (the
+         gRPC assemblies do that), so offline stays clean. Remoting is loaded
+         at runtime by Remoting.Boot(), never compiled against. -->
+    <Reference Include="Eplan.EplApi.Baseu">
+      <HintPath>$(EplanBin)\Eplan.EplApi.Baseu.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eplan.EplApi.DataModelu">
+      <HintPath>$(EplanBin)\Eplan.EplApi.DataModelu.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eplan.EplApi.HEServicesu">
+      <HintPath>$(EplanBin)\Eplan.EplApi.HEServicesu.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eplan.EplApi.MasterDatau">
+      <HintPath>$(EplanBin)\Eplan.EplApi.MasterDatau.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eplan.EplApi.Systemu">
+      <HintPath>$(EplanBin)\Eplan.EplApi.Systemu.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Eplan.EplApi.Starteru">
+      <HintPath>$(EplanBin)\Eplan.EplApi.Starteru.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
+

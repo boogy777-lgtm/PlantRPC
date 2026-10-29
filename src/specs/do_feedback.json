@@ -1,0 +1,300 @@
+{
+  "page": {
+    "library": "GOST_symbol",
+    "plant": "DO",
+    "location": "FB",
+    "counter": 1,
+    "replace": true
+  },
+  "placements": [
+    {
+      "id": "X1",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X1",
+      "x": 90,
+      "y": 170,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "K1_coil",
+      "symbol": "K",
+      "variant": 0,
+      "tag": "-K1",
+      "x": 90,
+      "y": 150,
+      "pins": [
+        "A1",
+        "A2"
+      ],
+      "hideContactImage": true
+    },
+    {
+      "id": "X2",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X2",
+      "x": 90,
+      "y": 130,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "X3",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X3",
+      "x": 170,
+      "y": 170,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "K1_nc",
+      "symbol": "O",
+      "variant": 0,
+      "tag": "-K1",
+      "x": 170,
+      "y": 150,
+      "pins": [
+        "21",
+        "22"
+      ]
+    },
+    {
+      "id": "X4",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X4",
+      "x": 170,
+      "y": 130,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "X5",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X5",
+      "x": 250,
+      "y": 170,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "K1_no",
+      "symbol": "S",
+      "variant": 0,
+      "tag": "-K1",
+      "x": 250,
+      "y": 150,
+      "pins": [
+        "13",
+        "14"
+      ]
+    },
+    {
+      "id": "Y1",
+      "symbol": "Y1",
+      "variant": 0,
+      "tag": "-Y1",
+      "x": 250,
+      "y": 130,
+      "pins": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "X6",
+      "symbol": "X",
+      "variant": 0,
+      "tag": "-X6",
+      "x": 250,
+      "y": 110,
+      "pins": [
+        "1",
+        "2"
+      ]
+    }
+  ],
+  "wires": [
+    {
+      "from": {
+        "placement": "X1",
+        "pin": "2"
+      },
+      "to": {
+        "placement": "K1_coil",
+        "pin": "A1"
+      }
+    },
+    {
+      "from": {
+        "placement": "K1_coil",
+        "pin": "A2"
+      },
+      "to": {
+        "placement": "X2",
+        "pin": "1"
+      }
+    },
+    {
+      "from": {
+        "placement": "X3",
+        "pin": "2"
+      },
+      "to": {
+        "placement": "K1_nc",
+        "pin": "21"
+      }
+    },
+    {
+      "from": {
+        "placement": "K1_nc",
+        "pin": "22"
+      },
+      "to": {
+        "placement": "X4",
+        "pin": "1"
+      }
+    },
+    {
+      "from": {
+        "placement": "X5",
+        "pin": "2"
+      },
+      "to": {
+        "placement": "K1_no",
+        "pin": "13"
+      }
+    },
+    {
+      "from": {
+        "placement": "K1_no",
+        "pin": "14"
+      },
+      "to": {
+        "placement": "Y1",
+        "pin": "1"
+      }
+    },
+    {
+      "from": {
+        "placement": "Y1",
+        "pin": "2"
+      },
+      "to": {
+        "placement": "X6",
+        "pin": "1"
+      }
+    }
+  ],
+  "texts": [
+    {
+      "text": "DO 24 V DC / 220 V AC",
+      "x": 40,
+      "y": 195,
+      "height": 3.5
+    },
+    {
+      "text": "DO +24 V (ПЛК)",
+      "x": 35,
+      "y": 180,
+      "height": 2.5
+    },
+    {
+      "text": "K1 катушка 24 V DC",
+      "x": 35,
+      "y": 162,
+      "height": 2.5
+    },
+    {
+      "text": "0 V",
+      "x": 35,
+      "y": 130,
+      "height": 2.5
+    },
+    {
+      "text": "Обратная связь",
+      "x": 115,
+      "y": 180,
+      "height": 2.5
+    },
+    {
+      "text": "+24 V",
+      "x": 115,
+      "y": 170,
+      "height": 2.5
+    },
+    {
+      "text": "K1 NC 21-22",
+      "x": 115,
+      "y": 162,
+      "height": 2.5
+    },
+    {
+      "text": "DI вход",
+      "x": 115,
+      "y": 130,
+      "height": 2.5
+    },
+    {
+      "text": "Нагрузка 220 V AC",
+      "x": 195,
+      "y": 180,
+      "height": 2.5
+    },
+    {
+      "text": "L 220 V",
+      "x": 195,
+      "y": 170,
+      "height": 2.5
+    },
+    {
+      "text": "K1 NO 13-14",
+      "x": 195,
+      "y": 162,
+      "height": 2.5
+    },
+    {
+      "text": "Y1",
+      "x": 195,
+      "y": 130,
+      "height": 2.5
+    },
+    {
+      "text": "N 220 V",
+      "x": 195,
+      "y": 110,
+      "height": 2.5
+    },
+    {
+      "text": "При отпущенном K1 NC замкнут: DI=1. При включении DO катушка K1 срабатывает, NC размыкается: DI=0.",
+      "x": 40,
+      "y": 100,
+      "height": 2.5
+    },
+    {
+      "text": "K1 NO 13-14 включает нагрузку 220 V AC. Катушка K1 питается от DO 24 V DC.",
+      "x": 40,
+      "y": 93,
+      "height": 2.5
+    }
+  ],
+  "export": {
+    "path": "C:\\Users\\HALLIBURTON\\Desktop\\EPLAN_RESEARCH\\artifacts\\wY_rpc\\do_fb_spec_export",
+    "width": 1800
+  }
+}

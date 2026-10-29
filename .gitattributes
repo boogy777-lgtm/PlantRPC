@@ -1,0 +1,2 @@
+# Handoff package ships a SHA-256 manifest; store and check out exact bytes, no EOL conversion.
+* -text
